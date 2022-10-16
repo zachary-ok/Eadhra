@@ -22,11 +22,11 @@ const commands = [
     description: 'Replies with Bueno!',
   },
   {
-    name: 'request movie',
+    name: "request movie",
     description: 'test',
   },
   {
-    name: 'request series',
+    name: "request series",
     description: 'test',
   },
 ];
@@ -67,10 +67,10 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'bueno') {
     await interaction.reply('https://i.imgur.com/a4pQcxn');
   }
-  if (interaction.commandName === 'request movie') {
+  if (interaction.commandName === "request movie") {
     await interaction.reply('https://i.imgur.com/a4pQcxn');
   }
-  if (interaction.commandName === 'request series') {
+  if (interaction.commandName === "request series") {
     await interaction.reply('https://i.imgur.com/a4pQcxn');
   }
 });
