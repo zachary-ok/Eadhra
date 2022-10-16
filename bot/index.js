@@ -21,14 +21,6 @@ const commands = [
     name: 'bueno',
     description: 'Replies with Bueno!',
   },
-  {
-    name: "request movie",
-    description: 'test',
-  },
-  {
-    name: "request series",
-    description: 'test',
-  },
 ];
 
 const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN);
@@ -37,7 +29,7 @@ const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN);
   try {
     console.log('Started refreshing application (/) commands.');
 
-    await rest.put(Routes.applicationCommands(DISCORD_CLIENT_ID), { body: commands });
+    await rest.put(Routes.applicationGuildCommands(DISCORD_CLIENT_ID, 700225257851846737), { body: [] });
 
     console.log('Successfully reloaded application (/) commands.');
   } catch (error) {
@@ -65,12 +57,6 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply('https://i.imgur.com/RoJ9IYz');
   }
   if (interaction.commandName === 'bueno') {
-    await interaction.reply('https://i.imgur.com/a4pQcxn');
-  }
-  if (interaction.commandName === "request movie") {
-    await interaction.reply('https://i.imgur.com/a4pQcxn');
-  }
-  if (interaction.commandName === "request series") {
     await interaction.reply('https://i.imgur.com/a4pQcxn');
   }
 });
