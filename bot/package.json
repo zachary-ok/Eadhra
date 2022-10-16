@@ -1,0 +1,19 @@
+{
+  "name": "eadhra",
+  "version": "0.1.0",
+  "description": "A multi-purpose Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachary-ok/Eadhra.git"
+  },
+  "author": "zacharyok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachary-ok/Eadhra/issues"
+  },
+  "homepage": "https://eahdra.tk"
+}
