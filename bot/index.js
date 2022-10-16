@@ -29,7 +29,7 @@ const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN);
   try {
     console.log('Started refreshing application (/) commands.');
 
-    await rest.put(Routes.applicationGuildCommands(DISCORD_CLIENT_ID, 700225257851846737), { body: [] });
+    await rest.put(Routes.applicationCommands(DISCORD_CLIENT_ID), { body: commands });
 
     console.log('Successfully reloaded application (/) commands.');
   } catch (error) {
