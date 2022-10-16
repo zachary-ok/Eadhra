@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/zachary-ok/Eadhra/issues"
   },
-  "homepage": "https://eahdra.tk"
+  "homepage": "https://eahdra.tk",
+  "dependencies": {
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
+  }
 }
