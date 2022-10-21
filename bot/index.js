@@ -21,6 +21,10 @@ const commands = [
     name: 'bueno',
     description: 'Replies with Bueno!',
   },
+  {
+    name: 'flatfuck',
+    description: 'Replies with Flat Fuck!',
+  },
 ];
 
 const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN);
@@ -58,6 +62,9 @@ client.on('interactionCreate', async interaction => {
   }
   if (interaction.commandName === 'bueno') {
     await interaction.reply('https://i.imgur.com/a4pQcxn');
+  }
+  if (interaction.commandName === 'flatfuck') {
+    await interaction.reply('https://imgur.com/a/Z4lHs7r');
   }
 });
 
