@@ -25,6 +25,10 @@ const commands = [
     name: 'flatfuck',
     description: 'Replies with Flat Fuck!',
   },
+  {
+    name: 'willsmith',
+    description: 'Replies with Will Smith!',
+  },
 ];
 
 const rest = new REST({ version: '10' }).setToken(DISCORD_TOKEN);
@@ -65,6 +69,9 @@ client.on('interactionCreate', async interaction => {
   }
   if (interaction.commandName === 'flatfuck') {
     await interaction.reply('https://imgur.com/a/Z4lHs7r');
+  }
+  if (interaction.commandName === 'willsmith') {
+    await interaction.reply('https://tenor.com/view/will-smith-doom-eternal-gif-18735959');
   }
 });
 
