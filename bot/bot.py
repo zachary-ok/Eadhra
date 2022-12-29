@@ -4,9 +4,7 @@ import os
 import asyncio
 from dotenv import load_dotenv, find_dotenv
 
-intents = discord.Intents.all()
-
-client = discord.Client(intents=intents)
+client = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 load_dotenv(find_dotenv())
 
 #Startup Actions
@@ -20,7 +18,7 @@ async def on_ready():
 async def load(): 
     for filename in os.listdir("./cogs"): #For testing purposes use "./bot/cogs"
         if filename.endswith(".py"):
-            await client.load_extension(f"cogs.{filename[:-3]}")
+            await commands.Cog.cog_load(f"cogs.{filename[:-3]}")
 
 async def main():
     async with client:
