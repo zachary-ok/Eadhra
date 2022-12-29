@@ -4,7 +4,7 @@ import os
 import asyncio
 from dotenv import load_dotenv, find_dotenv
 
-client = commands.Bot(intents=discord.Intents.all())
+client = discord.Client(intents=discord.Intents.all())
 load_dotenv(find_dotenv())
 
 #Startup Actions
