@@ -1,7 +1,6 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
-
-client = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
 class Ping(commands.Cog):
     def __init__(self,client):
@@ -13,7 +12,7 @@ class Ping(commands.Cog):
         print("Ping command is ready!")
 
     #Command
-    @client.tree.command(name="ping", description="Demonstrates bot latency in milliseconds")
+    @app_commands.command(name="ping", description="Demonstrates bot latency in milliseconds")
     async def ping(self, interaction: discord.Interaction):
         bot_latency = round(self.client.latency * 1000)
 

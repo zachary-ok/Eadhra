@@ -2,8 +2,6 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-
 class Meme(commands.Cog):
     def __init__(self,client):
         self.client = client
