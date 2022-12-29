@@ -1,2 +1,3 @@
+/bot/bot-env
 /bot/.env
-/bot/node_modules
+/bot/cogs/__pycache__
