@@ -16,9 +16,9 @@ async def on_ready():
 
 #Cog loader
 async def load(): 
-    for filename in os.listdir("./cogs"): #For testing purposes use "./bot/cogs"
+    for filename in os.listdir("./bot/cogs"): #For testing purposes use "./bot/cogs"
         if filename.endswith(".py"):
-            await commands.Bot.add_cog(f"cogs.{filename[:-3]}")
+            await client.load_extension(f"cogs.{filename[:-3]}")
 
 async def main():
     async with client:
