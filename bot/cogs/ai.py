@@ -32,7 +32,7 @@ class AI(commands.Cog):
         if model.name == "Dall-E":
             response = openai.Image.create(
                 prompt=prompt,
-                size="256x256"
+                size="512x512"
             )
             generation=response['data'][0]['url']
         else: 
